@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import PDFKit
 
 class ViewController: UIViewController {
+	
+	let document = PDFDocument()
+	var pdfView: PDFView {
+		return view as! PDFView
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		pdfView.document = document
+		pdfView.autoScales = true
+		pdfView.backgroundColor = .lightGray
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	
+	@IBAction func addImage(_ sender: Any) {
+		if let page = PDFPage(image: #imageLiteral(resourceName: "starScene")) {
+			document.insert(page, at: 0)
+			pdfView.layoutDocumentView()
+			pdfView.goToFirstPage(sender)
+		}
 	}
-
-
 }
-
