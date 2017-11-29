@@ -1,6 +1,6 @@
 #  PDFKit bug
 
-![screenshot](/private/tmp/pdfKitBug/screenshot.png)
+![screenshot](screenshot.png)
 
 ## Description
 When a PDFDocument is presented by a PDFView and a PDFPage (containing a UIImage) is inserted programatically, the view is updated to show the new page in the document but the page is inserted upside-down in the bottom right corner and scrolling through the document suddenly becomes impossible.
