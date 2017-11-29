@@ -7,10 +7,18 @@ When a PDFDocument is presented by a PDFView and a PDFPage (containing a UIImage
 
 ## Reproduction
 *— On a macOS device —*
-- Download the sample project from: https://github.com/Dev1an/PDFKit-Bug
+- Download and open the sample project from: https://github.com/Dev1an/PDFKit-Bug
 - Change the developer team
 - Run the project on a device or simulator
 
 *— In the app on the iOS device or simulator —*
 - Press the "+" icon in the top right corner of the screen.
 
+
+**What I get**
+
+A page containing the image is shown upside-down in the bottom right corner of the screen and it becomes impossible to scroll and/or zoom
+
+**What I expect**
+
+A page containing the image is shown in the middle of the screen, under the correct angle. Zooming and scrolling through the PDF should continue working.
